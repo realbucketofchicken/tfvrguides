@@ -1,0 +1,20 @@
+@font-face {
+    font-family: teamfortess;
+    src: url(TF2.ttf);
+}
+
+@font-face {
+    font-family: teamfortessbuild;
+    src: url(TF2Build.ttf);
+}
+
+body{
+    font-family: teamfortess;
+    color: rgb(0, 0, 0);
+    background-color: #ddbd9c;
+    font-size: larger;
+}
+
+a{
+    color:rgb(45, 122, 49);
+}
