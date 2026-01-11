@@ -13,8 +13,13 @@ h1{
     margin-top: 0;
 }
 
-body{
+h2{
     font-family: teamfortess;
+}
+
+body{
+	font-family:arial,helvetica,sans-serif;
+	font-size:14px;
     color: rgb(39, 39, 39);
     background-color: #2e2a28;
     font-size: x-large;
