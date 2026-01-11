@@ -50,6 +50,11 @@ button:hover{
     background-color: #ffb894;
 }
 
+img{
+    width: 95%; 
+    max-width: 25cm;
+}
+
 .middle{
     margin-top: 0;
     margin-left: auto;

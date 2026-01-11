@@ -11,7 +11,66 @@
     <div class="brickstop">
         <div class="middle" style="margin-top: 0;">
             <h1>Porting a map:</h1>
-            <p>this is a unfinished guide! nothing to see here, yet</p>
+            <div class="note">
+                <strong>NOTE:</strong>
+                <p>this is a <strong>unfinished</strong> guide!</p>
+                ask for help on discord
+            </div>
+            <h2>1. Prerequisites</h2>
+            <p>Install team fortress 2 on steam if you don't already have it(its free!)</p>
+            <p>Install <a href="https://download.blender.org/release/Blender3.6/blender-3.6.23-windows-x64.msi">blender 3.6</a></p>
+            <p>Install the <a href="https://github.com/REDxEYE/SourceIO/releases">source.io blender plugin</a> (if you are a TFVR dev, use mano’s custom source.io if you would want TFVR map materials)</p>
+            <p>Install <a href="https://github.com/lasa01/Plumber/releases"> plumber blender plugin</a></p>
+            <p>Install the <a href="../installingmodkit/modkit.html">contractors Modkit</a> (Basic unreal 4 knowledge is also needed)</p>
+            <p>Install the <a href="https://github.com/botero-dev/blender-datasmith-export/releases">datasmith export plugin for blender</a></p>
+            <p>Enable datasmith import in unreal</p>
+            <h2>1.5 getting a map bsp</h2>
+            <p>go to the folder where you installed tf2, and browse to <code>tf/maps</code>, here you will find every map in tf2!</p>
+            <h2>2. Lets get porting!</h2>
+            <p>First you want to open blender</p>
+            <p>now, go to <code>file>import>source engine assets>source map .bsp</code></p>
+            <img src="images/blenderimportsourcemap.png">
+            <p>Now set the world scale to 0.023 and set light power scale to 0.0225 and check rope entities on</p>
+            <img src="images/importoptions.png" style="max-height: 18cm; width: auto;">
+            <p>Now find your map's bsp</p>
+            <img src="images/importmap.png">
+            <p>Once its done importing go to the "brushes" collection on the right and delete all the objects in logic, environment and respawn visualizer</p>
+            <img src="images/brushcollections.png">
+            <p>Now set the sky camera scale to 16</p>
+            <img src="images/skycam.png">
+            <p>Select all the objects in static props and hit load entities, make sure to disable bvlg</p>
+            <img src="images/LoadEntity.png" style="max-height: 20cm; width: auto;">
+            <p>you <i>should</i> now have all models</p>
+            <p>by now you will have noticed a lack of sky in the map as there are walls all around you, these are actually the collisions for the map!
+                <br>We need them so players cant go out of bounds</p>
+            <p>what we will now do is just click on these walls, go into edit mode, and click on them again, so we select a single face</p>
+            <p>now you press shift + g and select material</p>
+            <img src="images/selectsimilar.png">
+            <img src="images/selectsimilar2.png">
+            <p>as the walls have a special material, only they will be selected</p>
+            <p>now you can just press right click and go to seperate->selection</p>
+            <p>we will use the walls again later, just pretent they arent there for the time being</p>
+            <img src="images/seperateselection.png">
+            <p>we're not using seperate by material because it will seperate <i>all</i> materials</p>
+            <p>Now you need to select all displacement meshes(they are in a collection) and right click and go on shade smooth</p>
+            <img src="images/shadesmooth.png">
+            <p>now you need to split your meshes UNFINISHED UNFINISHED UNFINISHED!!!</p>
+            <p>---</p>
+            <p>Select the skybox and go into wireframe rendering. now, while holding shift, you need to select the skybox camera object and then go to object->transform VMF 3D sky</p>
+            <img src="images/transformsky.png">
+            <p>Run the fixmodelnames script (and if you have mano’s custom source io, also run his clearmaterials.py)</p>
+            <p>once that is done select all objects in each collection and export them as udatasmith with <strong>selected objects only</strong> enabled</p>
+            <img src="images/ExportDatasmith.png">
+            <p>Still Motivated? Great! were only halfway done.</p>
+            <h2>3. she unreal on my engine</h2>
+            <p>Open your unreal map and click the datasmith icon</p>
+            <img src="images/datasmithicon.png">
+            <p>now one by one import each udatasmith file</p>
+            <img src="images/datasmithfiles.png">
+            <p>select your mod and import</p>
+            <img src="images/Datasmithimport.png" style="max-height: 20cm; width: auto;">
+            <p>Now fix any black materials if you are not using mano’s custom map shaders in the master</p>
+            <p>this guide is incomplete, further steps are detailed in the original <a href="https://docs.google.com/document/d/1erP_TtVvz7SknzIwAloByNWpJUQqwdYklYgV86sYkeU">google doc</a></p>
         </div>
         <div class="footer">
             
