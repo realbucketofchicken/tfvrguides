@@ -1,5 +1,5 @@
 function Nope(){
-    var audio = new Audio('nope-sfx.mp3')
+    var audio = new Audio('Syrsa - RMX - Surprise.ogg')
     audio.play()
     var x = document.getElementById("spyscare");
     if (x.style.display === "none"){
