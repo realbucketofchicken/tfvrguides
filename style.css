@@ -64,6 +64,11 @@ code{
     background-color: #cbacdd;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
+
 .middle{
     margin-top: 0;
     margin-left: auto;
