@@ -60,6 +60,10 @@ img{
     max-width: 25cm;
 }
 
+code{
+    background-color: #cbacdd;
+}
+
 .middle{
     margin-top: 0;
     margin-left: auto;
