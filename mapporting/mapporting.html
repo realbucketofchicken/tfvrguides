@@ -30,8 +30,10 @@
             <p>Install the <a href="https://github.com/botero-dev/blender-datasmith-export/releases">datasmith export plugin for blender</a></p>
             <p>Enable datasmith import in unreal</p>
             <h2>1.5 getting a map bsp</h2>
+
             <p>go to the folder where you installed tf2, and browse to <code>tf/maps</code>, here you will find every map in tf2!</p>
-            <h2>2. Lets get porting!</h2>
+            
+            <h2>Part one: Blender</h2>
             <p>First you want to open blender</p>
             <p>now, go to <code>file>import>source engine assets>source map .bsp</code></p>
             <img src="images/blenderimportsourcemap.png">
@@ -59,25 +61,33 @@
             <p>we're not using seperate by material because it will seperate <i>all</i> materials</p>
             <p>Now you need to select all displacement meshes(they are in a collection) and right click and go on shade smooth</p>
             <img src="images/shadesmooth.png">
-            <p>now you need to split your meshes UNFINISHED UNFINISHED UNFINISHED!!!</p>
+
+            <p>now you need to split your meshes, to do this you need to execute the split mesh into chunks script</p>
             <a href="scripts/split_mesh_into_chunks.py" download>download split chunks script</a> <br>
-            <a href="scripts/merge_meshes_into_chunks.py" download>download merge meshes script</a>
-            <p>---</p>
+            <img src="images/scriptingtut.png"><br>
+            <p>Select your world geometry and execute the script</p>
+            <!--<a href="scripts/merge_meshes_into_chunks.py" download>download merge meshes script(currently undocumented)</a>-->
+            <p>Next you need to select all of your newly created chunks and go to <code>object->set origin->origin to geometry</code></p>
+            <img src="images/origin.png">
+            <p>unselect your chunks and now, manually merge your displacements into bigger chunks</p>
             <p>Select the skybox and go into wireframe rendering. now, while holding shift, you need to select the skybox camera object and then go to object->transform VMF 3D sky</p>
             <img src="images/transformsky.png">
-            <p>Run the fixmodelnames script (and if you have mano’s custom source io, also run his clearmaterials.py)</p>
-            <p>once that is done select all objects in each collection and export them as udatasmith with <strong>selected objects only</strong> enabled</p>
+            <p>Run the fixmodelnames script (and if you have mano's custom source io, also run his clearmaterials.py)</p>
+            <p>once that is done select all objects in <strong>ONE</strong> collection and export them as udatasmith with <strong>selected objects only</strong> enabled, repeat this for all collections</p>
             <img src="images/ExportDatasmith.png">
-            <p>Still Motivated? Great! were only halfway done.</p>
-            <h2>3. she unreal on my engine</h2>
-            <p>Open your unreal map and click the datasmith icon</p>
+            <p>Halfway done! only 1% survive this far!(i think)</p>
+            
+            <h2>Part two: She unreal on my engine</h2>
+            <p>If you havent already, make a new map mod in unreal engine</p>
+            <p>then open your map and click the datasmith icon</p>
             <img src="images/datasmithicon.png">
             <p>now one by one import each udatasmith file</p>
             <img src="images/datasmithfiles.png">
             <p>select your mod and import</p>
             <img src="images/Datasmithimport.png" style="max-height: 20cm; width: auto;">
-            <p>Now fix any black materials if you are not using mano’s custom map shaders in the master</p>
-            <p>this guide is incomplete, further steps are detailed in the original <a href="https://docs.google.com/document/d/1erP_TtVvz7SknzIwAloByNWpJUQqwdYklYgV86sYkeU">google doc</a></p>
+            <p>Now fix any black materials if you didnt use mano's SourceIO</p>
+
+            <p>this guide is incomplete, further steps are detailed in the original <a href="https://docs.google.com/document/d/1erP_TtVvz7SknzIwAloByNWpJUQqwdYklYgV86sYkeU">google doc</a>, please annoy iconicplushstars on discord for help</p>
             
         </div>
         <div class="footer">
