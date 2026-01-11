@@ -86,11 +86,21 @@ code{
 .note {
     border: 2px;
     border-style: dashed;
-    border-color: #fffd6b;
+    border-color: #fffc35;
     background-color: #e9df98;
     padding: 10px;
     margin-right: auto;
     border-radius: 15px;
+}
+
+.warning {
+    border: 3px;
+    border-style: dashed;
+    border-color: #d6341e;
+    background-color: #f16868;
+    padding: 10px;
+    margin-right: auto;
+    border-radius: 0px;
 }
 
 .home{

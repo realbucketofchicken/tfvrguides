@@ -41,23 +41,25 @@
             <img src="images/importoptions.png" style="max-height: 18cm; width: auto;">
             <p>Now find your map's bsp</p>
             <img src="images/importmap.png">
-            <p>Once its done importing go to the "brushes" collection on the right and delete all the objects in logic, environment and respawn visualizer</p>
-            <img src="images/brushcollections.png">
+            <p>Once its done importing delete the collections logic and environment and then go to the "brushes" collection on the right and delete all the objects in respawn visualizer</p>
+            <img src="images/deletebrushes.png">
             <p>Now set the sky camera scale to 16</p>
             <img src="images/skycam.png">
             <p>Select all the objects in static props and hit load entities, make sure to disable bvlg</p>
             <img src="images/LoadEntity.png" style="max-height: 20cm; width: auto;">
             <p>you <i>should</i> now have all models</p>
-            <p>by now you will have noticed a lack of sky in the map as there are walls all around you, these are actually the collisions for the map!
-                <br>We need them so players cant go out of bounds</p>
-            <p>what we will now do is just click on these walls, go into edit mode, and click on them again, so we select a single face</p>
-            <p>now you press shift + g and select material</p>
-            <img src="images/selectsimilar.png">
+            <p>we dont have source-style skybox rendering so we need to remove the skybox</p>
+            <p>first thing to do is just click on these walls,</p>
+            <img src="images/selectsimilar1.png">
+            <p>go into edit mode, </p>
             <img src="images/selectsimilar2.png">
+            <p>and click on them again, so we select a single face, then you press shift + g and select material</p>
             <p>as the walls have a special material, only they will be selected</p>
+            <img src="images/selectsimilar3.png">
             <p>now you can just press right click and go to seperate->selection</p>
-            <p>we will use the walls again later, just pretent they arent there for the time being</p>
-            <img src="images/seperateselection.png">
+            <img src="images/selectsimilar4.png">
+            <p>Now you can delete them</p>
+            <img src="images/selectsimilar5.png">
             <p>we're not using seperate by material because it will seperate <i>all</i> materials</p>
             <p>Now you need to select all displacement meshes(they are in a collection) and right click and go on shade smooth</p>
             <img src="images/shadesmooth.png">
