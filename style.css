@@ -60,6 +60,11 @@ img{
     max-width: 25cm;
 }
 
+video{
+    width: 95%; 
+    max-width: 25cm;
+}
+
 code{
     background-color: #cbacdd;
 }
