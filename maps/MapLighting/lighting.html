@@ -33,37 +33,10 @@
             <p>Reflection Captures make reflections more accurate within the space they cover</p>
             <h2>How to fix the purple tint in your map</h2>
             <p>Increase the skylight res</p>
-            <p>if that dosent work, copy this blueprint into your level and it should work</p>
-            <div class="codesnip"><p style="text-wrap-style: auto;text-wrap-mode: wrap;">Begin Map
-   Begin Level
-      Begin Actor Class=/Script/Engine.SkyLight Name=SkyLight_1 Archetype=/Script/Engine.SkyLight'/Script/Engine.DefaultSkyLight'
-         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.DefaultSkyLight:Sprite'
-         End Object
-         Begin Object Class=/Script/Engine.SkyLightComponent Name="SkyLightComponent0" Archetype=SkyLightComponent'/Script/Engine.Default__SkyLight:SkyLightComponent0'
-         End Object
-         Begin Object Name="Sprite"
-            AttachParent="SkyLightComponent0"
-         End Object
-         Begin Object Name="SkyLightComponent0"
-            CubemapResolution=64
-            SkyDistanceThreshold=1.000000
-            bLowerHemisphereIsBlack=False
-            LightGuid=3703AC6D4B1A5831AAE4658F9B6E0262
-            Intensity=4.000000
-            IndirectLightingIntensity=2.000000
-            RelativeLocation=(X=-1635.661865,Y=230.167419,Z=154.222595)
-            RelativeScale3D=(X=1.150000,Y=1.150000,Z=1.150000)
-            Mobility=Static
-         End Object
-         LightComponent="SkyLightComponent0"
-         RootComponent="SkyLightComponent0"
-         ActorLabel="SkyLight"
-         FolderPath="Other"
-      End Actor
-   End Level
-Begin Surface
-End Surface
-End Map</p></div>
+        </div>
+        <div class="footer">
+            
         </div>
     </div>
+    
 </body>
