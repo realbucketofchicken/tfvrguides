@@ -103,6 +103,11 @@ code{
     border-radius: 0px;
 }
 
+.codesnip{
+    background-color: #e2e2e2;
+    
+}
+
 .home{
     min-width: 2.5cm;
     max-width: 3cm;

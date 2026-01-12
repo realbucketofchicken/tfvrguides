@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <title>Porting a map</title>
+    <link rel="icon" type="image/x-icon" href="../../devtfvr_small.png">
+    <meta content="TFVR modding on linux" property="og:title" />
+    <meta content="a guide on use the modkit on linux" property="og:description" />
+    <meta content="https://realbucketofchicken.github.io/tfvrguides/index.html" property="og:url" />
+    <meta content="https://realbucketofchicken.github.io/tfvrguides/devtfvr_small.png" property="og:image" />
+    <meta content="#bd3a97" data-react-helmet="true" name="theme-color" />
+</head>
+<body>
+    <a href="../../index.html">
+            <img src="../../devtfvr_small.png" class="home" alt="return to home">
+        </a>
+    <div class="brickstop">
+        <div class="middle" style="margin-top: 0;">
+            <h1>Getting the Lighting right:</h1>
+            <h2>Sun (Directional Light) - Static</h2>
+            <code>Source Soft Angle = 10</code><br>
+            <code>Indirect Lighting Intensity = 2</code><br>
+            <code>Light Source Angle = 10</code><br>
+            <code>Shadow Exponent = 5</code><br>
+            <h2>SkyLight - Static</h2>
+            <code>Cubemap resolution = 64</code> (can be set higher if reflections turn purple-ish) <br>
+            <code>Sky Distance Threshold = 1</code><br>
+            <code>Intensity Scale = 4</code>(depends on the map, as this is how much light the sky casts on the world)<br>
+            <code>Light Color = white</code>(change it if you want for stylistic reasons)
+            <h2>Reflection Captures</h2>
+            <p>Drag at least one onto the map</p>
+            <p>Use Sphere Reflection Captures for exterior spaces</p>
+            <p>Use Box Reflection Captures for interior spaces</p>
+            <p>Reflection Captures make reflections more accurate within the space they cover</p>
+            <h2>How to fix the purple tint in your map</h2>
+            <p>Increase the skylight res</p>
+            <p>if that dosent work, copy this blueprint into your level and it should work</p>
+            <div class="codesnip"><p style="text-wrap-style: auto;text-wrap-mode: wrap;">Begin Map
+   Begin Level
+      Begin Actor Class=/Script/Engine.SkyLight Name=SkyLight_1 Archetype=/Script/Engine.SkyLight'/Script/Engine.DefaultSkyLight'
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.DefaultSkyLight:Sprite'
+         End Object
+         Begin Object Class=/Script/Engine.SkyLightComponent Name="SkyLightComponent0" Archetype=SkyLightComponent'/Script/Engine.Default__SkyLight:SkyLightComponent0'
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="SkyLightComponent0"
+         End Object
+         Begin Object Name="SkyLightComponent0"
+            CubemapResolution=64
+            SkyDistanceThreshold=1.000000
+            bLowerHemisphereIsBlack=False
+            LightGuid=3703AC6D4B1A5831AAE4658F9B6E0262
+            Intensity=4.000000
+            IndirectLightingIntensity=2.000000
+            RelativeLocation=(X=-1635.661865,Y=230.167419,Z=154.222595)
+            RelativeScale3D=(X=1.150000,Y=1.150000,Z=1.150000)
+            Mobility=Static
+         End Object
+         LightComponent="SkyLightComponent0"
+         RootComponent="SkyLightComponent0"
+         ActorLabel="SkyLight"
+         FolderPath="Other"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map</p></div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <title>Porting a map</title>
+    <link rel="icon" type="image/x-icon" href="../devtfvr_small.png">
+    <meta content="Fix max file paths" property="og:title" />
+    <meta content="a guide on fixing the Windows file path limit" property="og:description" />
+    <meta content="https://realbucketofchicken.github.io/tfvrguides/index.html" property="og:url" />
+    <meta content="https://realbucketofchicken.github.io/tfvrguides/devtfvr_small.png" property="og:image" />
+    <meta content="#bd3a97" data-react-helmet="true" name="theme-color" />
+</head>
+<body>
+    <a href="../index.html">
+            <img src="../devtfvr_small.png" class="home" alt="return to home">
+        </a>
+    <div class="brickstop">
+        <div class="middle" style="margin-top: 0;">
+            <h1>Fix file paths too long:</h1>
+            <p>In Windows, there's a limit to how long file paths can be. This restriction can be lifted by changing a value in the registry</p>
+            <a href="files/EnableLongPaths.reg" download>downlaod the registry changes</a>
+            <p>if you are concerned about security: the reg file is readable by any text editor so you can confirm what changes are being made</p>
+            <p>Double click on it and it should apply the changes</p>
+            <p>a restart is needed</p>
+            <p>incase it dosent work, open up the registy editor</p>
+            <p>go to <code>file>import file</code> and select the file you just downloaded</p>
+            <p>a restart is also needed</p>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+</body>
