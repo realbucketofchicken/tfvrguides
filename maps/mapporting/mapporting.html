@@ -43,10 +43,10 @@
             <img src="images/importmap.png">
             <p>Once its done importing delete the collections logic and environment and then go to the "brushes" collection on the right and delete all the objects in respawn visualizer</p>
             <img src="images/deletebrushes.png">
-            <p>Now set the sky camera scale to 16</p>
+            <p><strong>If</strong> your map has a skybox set the sky camera scale to 16</p>
             <img src="images/skycam.png">
             <p>Select all the objects in static props and hit load entities, make sure to disable bvlg</p>
-            <img src="images/LoadEntity.png" style="max-height: 20cm; width: auto;">
+            <img src="images/staticprops.png" style="max-height: 20cm; width: auto;">
             <p>you <i>should</i> now have all models</p>
             <p>we dont have source-style skybox rendering so we need to remove the skybox</p>
             <p>first thing to do is just click on these walls,</p>
@@ -72,10 +72,10 @@
             <p>Next you need to select all of your newly created chunks and go to <code>object->set origin->origin to geometry</code></p>
             <img src="images/origin.png">
             <p>unselect your chunks and now, manually merge your displacements into bigger chunks</p>
-            <p>Select the skybox and go into wireframe rendering. now, while holding shift, you need to select the skybox camera object and then go to object->transform VMF 3D sky</p>
+            <p>If your map has a skybox, select the skybox and go into wireframe rendering. now, while holding shift, you need to select the skybox camera object and then go to object->transform VMF 3D sky</p>
             <img src="images/transformsky.png">
             <!--<p>Run the fixmodelnames script (and if you have mano's custom source io, also run his clearmaterials.py)</p>-->
-            <p>once that is done select all objects in <strong>ONE</strong> collection and export them as udatasmith with <strong>selected objects only</strong> enabled, repeat this for all collections</p>
+            <p>once that is done select all objects that are in <strong>ONE</strong> collection and export them as udatasmith with <strong>selected objects only</strong> enabled, repeat this for all collections</p>
             <img src="images/ExportDatasmith.png">
             <p>Congrats, you are done with blender(<i>in this guide</i>)! only 1% survive this far!(i think)</p>
             
