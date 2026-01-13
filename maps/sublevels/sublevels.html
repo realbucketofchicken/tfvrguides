@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../../style.css">
+    <title>Sublevels</title>
+    <link rel="icon" type="image/x-icon" href="../../devtfvr_small.png">
+    <meta content="Sublevels" property="og:title" />
+    <meta content="a guide on how to apply sublevels correctly" property="og:description" />
+    <meta content="https://realbucketofchicken.github.io/tfvrguides/index.html" property="og:url" />
+    <meta content="https://realbucketofchicken.github.io/tfvrguides/devtfvr_small.png" property="og:image" />
+    <meta content="#bd3a97" data-react-helmet="true" name="theme-color" />
+</head>
+<body>
+    <a href="../../index.html">
+            <img src="../../devtfvr_small.png" class="home" alt="return to home">
+        </a>
+    <div class="brickstop">
+        <div class="middle" style="margin-top: 0;">
+            <h1>Sublevels:</h1>
+            <i>requires our modkit </i>
+            <p>We seperate Visuals and collisions from gamemode related things, like spawns and the payload<br>
+            This is so we can reset the game state without having to reload everything(much slower)<br>
+            Having sublevels is necessary for multi round maps</p>
+            <h2>How do i configure sublevels?</h2>
+            <p>its real simple:<br>
+            Firstly you will enable the "Levels" window under Window>Levels</p>
+            <img src="images/EnabelingLevels.png">
+            <p>Now, create a new level, name it like the gamemode youre making<br>
+            Drag this in the levels window</p>
+            <img src="images/DragSublevel.png">
+            <p>The level at the top is for things that dont change, The sublevel named <strong>after the gamemode youre making</strong> will be used to reload when a new round starts, so please make sure to not misspell it</p>
+            <img src="images/LevelExplaination.png">
+            <p>Now you need to make sure that all gameplay related things are inside the gamemode sublevel
+            <br> youre done!
+            </p>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+</body>
