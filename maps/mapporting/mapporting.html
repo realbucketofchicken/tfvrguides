@@ -48,7 +48,7 @@
             <p>Select all the objects in static props and hit load entities, make sure to disable bvlg</p>
             <img src="images/staticprops.png" style="max-height: 20cm; width: auto;">
             <p>you <i>should</i> now have all models</p>
-            <p>we dont have source-style skybox rendering so we need to remove the skybox</p>
+            <p>we dont have source-style skybox rendering so we need to "remove" the skybox, we will still use it for collision</p>
             <p>first thing to do is just click on these walls,</p>
             <img src="images/selectsimilar1.png">
             <p>go into edit mode, </p>
@@ -58,14 +58,16 @@
             <img src="images/selectsimilar3.png">
             <p>now you can just press right click and go to seperate->selection</p>
             <img src="images/selectsimilar4.png">
-            <p>Now you can delete them</p>
+            <p>Now you can hide them if you want to</p>
             <img src="images/selectsimilar5.png">
             <p>we're not using seperate by material because it will seperate <i>all</i> materials</p>
+            <br>
             <p>Now you need to select all displacement meshes(they are in a collection) and right click and go on shade smooth</p>
             <img src="images/shadesmooth.png">
+            <p>now you should merge all displacements into one</p>
 
-            <p>now you need to split your meshes, to do this you need to execute the split mesh into chunks script</p>
-            <a href="scripts/split_mesh_into_chunks.py" download>download split chunks script</a> <br>
+            <p>next you need to chunk your meshes, to do this you need to execute the split mesh into chunks script</p>
+            <a href="scripts/split_mesh_into_chunks.py" download>download split mesh into chunks script</a> <br>
             <img src="images/scriptingtut.png"><br>
             <p>Select your world geometry and execute the script</p>
             <!--<a href="scripts/merge_meshes_into_chunks.py" download>download merge meshes script(currently undocumented)</a>-->
