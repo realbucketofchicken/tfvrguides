@@ -88,6 +88,17 @@ code{
     border-style: solid;
 }
 
+.info {
+    border: 2px;
+    border-style: double;
+    border-color: #6776ff;
+    background-color: #98a4e9;
+    padding: 10px;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+
 .note {
     border: 2px;
     border-style: dashed;
@@ -142,4 +153,8 @@ code{
   background-position: top center;
   text-align: center;
   min-height: 1023px;
+}
+
+.unfin{
+    color: #a7388b;
 }

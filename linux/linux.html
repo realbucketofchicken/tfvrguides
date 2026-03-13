@@ -16,9 +16,9 @@
     <div class="brickstop">
         <div class="middle" style="margin-top: 0;">
             <h1>Modding on linux:</h1>
-            <div class="warning"><strong>WARNING:</strong><p>Using linux is unstable and buggy at times, only do this if you <i>really</i> hate windows</p></div>
+            <div class="info"><strong>INFO</strong><p>The Linux workflow may be different than the windows workflow for some minor things, but i trust you will be able to adapt the guides if needed</p></div>
             <p>yes, we got these kinds of nerds here, welcome</p>
-            <p>im gonna expect you to be a bit more technically literate</p>
+            <p>im gonna expect you to be a tiny bit more technically literate</p>
             <h2>Requirements of the editor</h2>
             <p>For the modkit to not crash instantly you need to setup some things:</p>
             <h3>1. Launch the modkit with proton 9.0.4</h3>
@@ -27,7 +27,7 @@
             <p>under the compatibility tab check <code>Force the use of a specific Steam Play compatibility tool</code></p>
             <p>and select proton 9.0.4(only one i found to work, deviate at own risk)</p>
             <h3>2. Install some dependencies using protontricks</h3>
-            <div class="note"><strong>NOTE:</strong><p> i am not sure if these are actually needed but i cant be bothered to test. having them shouldnt hurt either way as they are required for base contractors</p></div>
+            <div class="info"><strong>INFO</strong><p> Im not sure if you need this, try skipping this step and report back in <a href="https://canary.discord.com/channels/1022524842144190495/1163877043633651742">#mini-dev-lounge</a></p></div>
             <p>install <a href="https://flathub.org/apps/com.github.Matoking.protontricks">protontricks</a></p>
             <p>open the program and select the Non-Steam shortcut to unreal engine that you made in a previous step</p>
             <p>(you might get some errors/warnings here, you should be safe to ignore them)</p>
@@ -35,33 +35,33 @@
             <p>select <code>Install a Windows DLL or component</code></p>
             <p>now select <code>d3dcompiler_43</code>,<code>d3dx9</code>,( <code>vcrun2015</code> or <code>vcrun2022</code> ) and <code>dxvk</code> and hit OK</p>        <p>you might get the same errors you faced earlier, you can again ignore them</p>
             <p>if you get a warning about a checksum not matching you should still be fine as they happen often with frequently updated packages like vcrun</p>
-            <h2>Open the editor</h2>
+            <h3>3. Open the editor</h3>
             <p>Open the Editor from steam</p>
             <p>if unreal ask you to make a backup before opening, select the convert in-place option(it might be hidden behind a more options thingy)</p>
             <p>you wont be able to launch the editor from the .uproject file, you must instead launch the editor manually or specify the path to the uproject in the <a href="https://help.steampowered.com/en/faqs/view/7D01-D2DD-D75E-2955">launch arguments</a> of the link in steam</p>
             <h2>Issues, notes and workarounds, Please read</h2>
             <h3>Changing the Gamemode override in world settings freezes the editor</h3>
-            <p>patience my friend, it really might take an hour, you never know /srs</p>
+            <p>Remember when i said that unreal engine is really slow?<br>
+            Wait for unreal to finish.</p>
             <h3>The editor feels laggy</h3>
-            <p>i know</p>
+            <p>Not a linux issue</p>
             <h3>I cant drag and drop files into unreal</h3>
             <p>it dosent work, yeah, a workaround is the following:</p>
             <p>right click in the unreal file explorer and select the import option</p>
             <p>under my pc select the Z: drive(its /(root) under the hood) and browse to <code>/home/yourusername/</code> if the file youre importing is in your home directory</p>
             <p>or if the file is on an external drive go to /run/media/yourusername/yourdrive/ and locate the file</p>
             <h3>The modkit keeps Crashing, what do i do?</h3>
-            <div class="note"><p>NOTE:</p><p>Ive had issues with crashing on my previous pc which had a nvidia graphics card so that might be an contributing factor</p></div>
+            <div class="note"><b>NOTE</b><p>Ive had issues with crashing on my previous pc which had a nvidia graphics card so that might be an contributing factor</p></div>
             <p>try restarting the modkit or your pc, for me it crashed the first times i launched the modkit but then never happened again</p>
             <br>
+            <h3>my gizmos are tweaking.</h3>
+            <p><a href="../gizmos/gizmos.html">the fix</a></p>
+            <h2>Testing for errors</h2>
             <p>shut down steam if its running</p>
             <p>launch steam in a terminal by using the steam "command"</p>
             <p>launch the editor and use it until it crashes</p>
             <p>see if theres anything useful in the console</p>
             <p>-> using this you might be able to debug the issue</p>
-            <h3>my gizmos are tweaking.</h3>
-            <p>yup</p>
-            <h3>I cant package mods?</h3>
-            <p>this seems unfixable when running under an compatability layer, try a virtual machine or something like winboat for better integartion</p>
 
         </div>
         <div class="footer">
