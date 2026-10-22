@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <link rel="stylesheet" href="../style.css">
     <title>Modkit on linux</title>
@@ -9,50 +10,76 @@
     <meta content="https://realbucketofchicken.github.io/tfvrguides/devtfvr_small.png" property="og:image" />
     <meta content="#bd3a97" data-react-helmet="true" name="theme-color" />
 </head>
+
 <body>
     <a href="../index.html">
-            <img src="../devtfvr_small.png" class="home" alt="return to home">
-        </a>
+        <img src="../devtfvr_small.png" class="home" alt="return to home">
+    </a>
     <div class="brickstop">
         <div class="middle" style="margin-top: 0;">
             <h1>Modding on linux:</h1>
-            <div class="info"><strong>INFO</strong><p>The Linux workflow may be different than the windows workflow for some minor things, but i trust you will be able to adapt the guides if needed<br><br>
-            <b>Light baking</b> is <b>not</b> supported on linux as far as we know</p></div>
+            <div class="info"><strong>INFO</strong>
+                <p>The Linux workflow may be different than the windows workflow for some minor things, but i trust you
+                    will be able to adapt the guides if needed<br><br>
+                    <b>Light baking</b> is supported on linux, however not very stable, talk to bucket of chicken for
+                    more infos
+                </p>
+            </div>
             <p>im gonna expect you to be a tiny bit more technically literate</p>
             <h2>Requirements of the editor</h2>
             <p>For the modkit to not crash instantly you need to setup some things:</p>
-            <h3>1. Launch the modkit with proton 9.0.4</h3>
-            <p>go to steam and add <code>UE4Editor.exe</code>(under <code>ModEngine/Engine/Binaries/Win64/</code> ) as a non-steam game</p>
+            <h3>1. Launch the modkit with GE-Proton 11 or up</h3>
+            <p>go to steam and add <code>UE4Editor.exe</code>(under <code>ModEngine/Engine/Binaries/Win64/</code> ) as a
+                non-steam game</p>
             <p>on steam, right click it and go to properties</p>
-            <p>under the compatibility tab check <code>Force the use of a specific Steam Play compatibility tool</code></p>
+            <p>under the compatibility tab check <code>Force the use of a specific Steam Play compatibility tool</code>
+            </p>
             <p>and select proton 9.0.4(only one i found to work, deviate at own risk)</p>
             <h3>2. Install some dependencies using protontricks</h3>
-            <div class="info"><strong>INFO</strong><p> Im not sure if you need this, try skipping this step and report back in <a href="https://canary.discord.com/channels/1022524842144190495/1163877043633651742">#mini-dev-lounge</a></p></div>
+            <div class="info"><strong>INFO</strong>
+                <p> Im not sure if you need this, try skipping this step and report back in <a
+                        href="https://canary.discord.com/channels/1022524842144190495/1163877043633651742">#mini-dev-lounge</a>
+                </p>
+            </div>
             <p>install <a href="https://flathub.org/apps/com.github.Matoking.protontricks">protontricks</a></p>
             <p>open the program and select the Non-Steam shortcut to unreal engine that you made in a previous step</p>
             <p>(you might get some errors/warnings here, you should be safe to ignore them)</p>
             <p>select <code>select the default wineprefix</code></p>
             <p>select <code>Install a Windows DLL or component</code></p>
-            <p>now select <code>d3dcompiler_43</code>,<code>d3dx9</code>,( <code>vcrun2015</code> or <code>vcrun2022</code> ) and <code>dxvk</code> and hit OK</p>        <p>you might get the same errors you faced earlier, you can again ignore them</p>
-            <p>if you get a warning about a checksum not matching you should still be fine as they happen often with frequently updated packages like vcrun</p>
+            <p>now select <code>d3dcompiler_43</code>,<code>d3dx9</code>,( <code>vcrun2015</code> or
+                <code>vcrun2022</code> ) and <code>dxvk</code> and hit OK
+            </p>
+            <p>you might get the same errors you faced earlier, you can again ignore them</p>
+            <p>if you get a warning about a checksum not matching you should still be fine as they happen often with
+                frequently updated packages like vcrun</p>
             <h3>3. Open the editor</h3>
             <p>Open the Editor from steam</p>
-            <p>if unreal ask you to make a backup before opening, select the convert in-place option(it might be hidden behind a more options thingy)</p>
-            <p>you wont be able to launch the editor from the .uproject file, you must instead launch the editor manually or specify the path to the uproject in the <a href="https://help.steampowered.com/en/faqs/view/7D01-D2DD-D75E-2955">launch arguments</a> of the link in steam</p>
+            <p>if unreal ask you to make a backup before opening, select the convert in-place option(it might be hidden
+                behind a more options thingy)</p>
+            <p>you wont be able to launch the editor from the .uproject file, you must instead launch the editor
+                manually or specify the path to the uproject in the <a
+                    href="https://help.steampowered.com/en/faqs/view/7D01-D2DD-D75E-2955">launch arguments</a> of the
+                link in steam</p>
             <h2>Issues, notes and workarounds, Please read</h2>
             <h3>Changing the Gamemode override in world settings freezes the editor</h3>
             <p>Remember when i said that unreal engine is really slow?<br>
-            Wait for unreal to finish.</p>
+                Wait for unreal to finish.</p>
             <h3>The editor feels laggy</h3>
             <p>Not a linux issue</p>
             <h3>I cant drag and drop files into unreal</h3>
             <p>it dosent work, yeah, a workaround is the following:</p>
             <p>right click in the unreal file explorer and select the import option</p>
-            <p>under my pc select the Z: drive(its /(root) under the hood) and browse to <code>/home/yourusername/</code> if the file youre importing is in your home directory</p>
+            <p>under my pc select the Z: drive(its /(root) under the hood) and browse to
+                <code>/home/yourusername/</code> if the file youre importing is in your home directory
+            </p>
             <p>or if the file is on an external drive go to /run/media/yourusername/yourdrive/ and locate the file</p>
             <h3>The modkit keeps Crashing, what do i do?</h3>
-            <div class="note"><b>NOTE</b><p>Ive had issues with crashing on my previous pc which had a nvidia graphics card so that might be an contributing factor</p></div>
-            <p>try restarting the modkit or your pc, for me it crashed the first times i launched the modkit but then never happened again</p>
+            <div class="note"><b>NOTE</b>
+                <p>Ive had issues with crashing on my previous pc which had a nvidia graphics card so that might be an
+                    contributing factor</p>
+            </div>
+            <p>try restarting the modkit or your pc, for me it crashed the first times i launched the modkit but then
+                never happened again</p>
             <br>
             <h3>my gizmos are tweaking.</h3>
             <p>not a linux issue, <a href="../gizmos/gizmos.html">the fix</a></p>
@@ -65,7 +92,7 @@
 
         </div>
         <div class="footer">
-            
+
         </div>
     </div>
 </body>
